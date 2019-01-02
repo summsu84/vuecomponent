@@ -1,6 +1,11 @@
 # vue_comp
 
-> A Vue.js project
+> A Vue.js project for custom components
+
+# List
+> TableGridComponent : This is dynamic table grid component (developing)
+> DynamicTableGridComponent
+> CommonModalComponent
 
 ## Build Setup
 
