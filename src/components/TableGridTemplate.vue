@@ -66,35 +66,35 @@ export default {
     'data',
     'columns',
     'filteredData',
-    'title',
+    'title'
   ],
   computed: {
 
   },
-  data() {
-    const sortOrders = {};
+  data () {
+    const sortOrders = {}
     this.columns.forEach((key) => {
-      sortOrders[key] = 1;
-    });
+      sortOrders[key] = 1
+    })
     const foo = {
-      sortKey: '',
-    };
-    return foo;
+      sortKey: ''
+    }
+    return foo
   },
   methods: {
-    openDetail(rowObj) {
+    openDetail (rowObj) {
       // 부모에서 재정의한다.
-      console.log(rowObj);
-      this.$emit('clickRowEvent', rowObj);
+      console.log(rowObj)
+      this.$emit('clickRowEvent', rowObj)
     },
-    actionEditRow(rowObj) {
-      this.$emit('actionEditRowEvent', rowObj);
+    actionEditRow (rowObj) {
+      this.$emit('actionEditRowEvent', rowObj)
     },
-    actionRemoveRow(rowObj) {
-      this.$emit('actionRemoveRowEvent', rowObj);
-    },
-  },
-};
+    actionRemoveRow (rowObj) {
+      this.$emit('actionRemoveRowEvent', rowObj)
+    }
+  }
+}
 </script>
 <style>
   /*
