@@ -3,6 +3,9 @@ import VueRouter from 'vue-router'
 
 import NewComponent from "../views/NewComponent";
 import HelloWorld from "../components/HelloWorld";
+import UserComponent from "../views/user/UserComponent";
+import UserProfileComponent from "../views/user/UserProfileComponent";
+import UserPostComponent from "../views/user/UserPostComponent";
 
 Vue.use(VueRouter);
 
@@ -17,6 +20,20 @@ const router = new VueRouter({
         {
             path: '/new',
             component: NewComponent
+        },
+        {
+            path: '/user',
+            component: UserComponent,
+            children: [
+                {
+                    path: 'profile',
+                    component: UserProfileComponent
+                },
+                {
+                    path: 'post',
+                    component: UserPostComponent
+                }
+            ]
         }
     ]
 })
