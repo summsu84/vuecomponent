@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h2>UserHome</h2>
+        <h2>UserHome Counter : {{$store.state.counter}}</h2>
         <router-view/>
         <button @click="goProfile">Profile</button>
         <button @click="goPost">Post</button>
@@ -13,10 +13,10 @@
         name: "User",
         methods: {
             goProfile() {
-                this.$router.push('profile');
+                this.$router.push('/user/profile');
             },
             goPost() {
-                this.$router.push('post');
+                this.$router.push('/user/post');
             }
         }
     }

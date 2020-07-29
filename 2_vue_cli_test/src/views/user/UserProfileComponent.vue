@@ -1,12 +1,18 @@
 <template>
     <div>
         Profile
+        <button @click="subCount">SubCount</button>
     </div>
 </template>
 
 <script>
     export default {
-        name: "UserProfileComponent"
+        name: "UserProfileComponent",
+        methods: {
+            subCount() {
+                this.$store.state.counter--;
+            }
+        }
     }
 </script>
 
